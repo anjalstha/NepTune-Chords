@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Chords</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Chords</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar placeholder="Chords, Artists or Bands" show-clear-button="focus" (ionInput)="handleInput($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let song of results">
+    <ion-item (click)="goToDetailPage(song)">
+      <ion-row>
+        <ion-col style="max-width: fit-content;">
+          <img class="artistImage" [src]="'../../assets/artist-images/' + song.imageName + '.jpg'">        </ion-col>
+        <ion-col>
+          <ion-label>
+            <ion-label>
+              <h1 style="font-size: 1.5em;">{{ song.title }}</h1>
+              <h2 style="font-size: 1.2em; opacity: 0.8;">{{ song.artist }}</h2>
+              <h3 style="font-size: 1em; opacity: 0.6;">{{ song.genre }}</h3>
+              <p style="font-size: 0.8em; opacity: 0.6;">{{ song.year }}</p>
+            </ion-label>
+
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item-options side="end">
+      <ion-item-option color="primary" (click)="editSong(song, true)">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" routerLink="/home">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chords" routerLink="/chords">
+      <ion-icon name="musical-notes"></ion-icon>
+      <ion-label>Chords</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-footer>
+

@@ -1,0 +1,7 @@
+{
+  "name": "nepTuneChords",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

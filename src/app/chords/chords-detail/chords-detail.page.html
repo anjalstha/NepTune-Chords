@@ -1,0 +1,85 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ song.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title *ngIf="!editMode" size="large">{{ song.title }}</ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-row style="    justify-content: right; padding-bottom: 15px;">
+
+    <ion-buttons >
+      <ion-button fill="outline" style="padding-right: 5px;" (click)="savePopUp()">
+        Save
+      </ion-button>
+      <ion-button fill="outline" style="padding-right: 10px;" (click)="exitPopUp()">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+  </ion-row>
+  <ion-row>
+
+  <ion-item style="width: 90%;">
+    <ion-input [(ngModel)]="song.title" placeholder="Enter Title of the song"> </ion-input>
+  </ion-item>
+</ion-row>
+
+</ion-card-content>
+</ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <div *ngIf="!editMode">
+      <strong>Artist:</strong> {{ song.artist }} <br>
+    </div>
+    <ion-item *ngIf="editMode">
+        <ion-input style="text-align: right;" label="Artist" [(ngModel)]="song.artist" placeholder="Enter Artist Name"> </ion-input>
+      </ion-item>
+
+      <div *ngIf="!editMode">
+      <strong>Genre:</strong> {{ song.genre }}<br>
+    </div>
+
+      <ion-item *ngIf="editMode">
+        <ion-select placeholder="Select a Genre"  [multiple]="true">
+          <div slot="label">Genre </div>
+          <ion-select-option value="Nepali Folk Music">Nepali Folk Music</ion-select-option>
+          <ion-select-option value="Nepali Pop">Nepali Pop</ion-select-option>
+          <ion-select-option value="Nepali Rock">Nepali Rock</ion-select-option>
+          <ion-select-option value="Nepali Classical Music">Nepali Classical Music</ion-select-option>
+          <ion-select-option value="Nepali Bhajan/Kirtan">Nepali Bhajan/Kirtan</ion-select-option>
+          <ion-select-option value="Nepali Filmi Music">Nepali Filmi Music</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <br>
+
+      <strong>Lyrics:</strong>
+      <br>
+      <pre *ngIf="!editMode">
+        {{ song.lyrics }}
+      </pre>
+
+      <ion-item *ngIf="editMode">
+        <pre>
+        <ion-textarea [(ngModel)]="song.lyrics" placeholder="Enter Lyrics and Chords" auto-grow="true"> </ion-textarea>
+      </pre>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+
+

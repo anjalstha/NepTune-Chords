@@ -1,0 +1,174 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+// @import "~ngx-smart-modal/styles/ngx-smart-modal";
+@import "node_modules/ngx-smart-modal/styles/ngx-smart-modal.css";
+
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+.artistImage{
+  height: 100px;
+  max-width: fit-content;
+  border-radius: 10px;
+}
+
+// ion-content {
+//   --background: #FFFFFF;
+// }
+
+// ion-toolbar {
+//   --background: white;
+// }
+
+// .list-md {
+//   background: white;
+// }
+
+// ion-label{
+//   --background: white;
+// }
+
+// ion-card{
+//   --background: white;
+// }
+
+
+// ion-item{
+//   --background: white;
+//   color: black;
+//   --color-hover: black;
+// }
+
+// ion-icon{
+//   color: #777;
+//   }
+
+// ion-title{
+//   color: black;
+// }
+
+// .form-control-passwordPrompt{
+//   background-color: #eee;
+//   border-radius: 25px;
+//   border: 0;
+//   font-size: 16px;
+//   height: 38px;
+//   padding: 0 20px;
+//   width: 100%;
+//   color: #000;
+
+// .native-input.sc-ion-input-md{
+//   padding-left: 20px;
+// }
+
+// }
+
+// .invalid-feedback {
+//   color: #f44336;
+//   font-size: 12px;
+//   margin-top: 5px;
+// }
+
+// .fixed-top-content {
+//   background: #086634;
+//   padding-left: 14px !important;
+// }
+
+// ion-menu-toggle:hover {
+//   background-color: black;
+// }
+// .sc-ion-buttons-md-h{
+//   color: #000;
+// }
+
+// .table-header {
+//   background: var(--ion-color-default);
+//   color:black;
+//   padding: 5px;
+//   padding-left: 10px;
+// }
+
+// ion-card {
+//   text-align: center;
+//   cursor: pointer;
+//   outline: none;
+//   margin-left: 15px !important;
+// }
+
+// ion-card-content{
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+
+// .sidemenu{
+//   background-color: #3a3838; /* Change to the desired hover background color */
+//   cursor: pointer; /* Change cursor to pointer on hover */
+// }
+
+// .custom-loading .loading-wrapper {
+//   background-color: transparent !important;
+//   box-shadow: none !important;
+
+// }
+
+// .custom-loading .thinking-message {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .custom-loading .thinking-message img {
+//   width: 100px; /* Adjust size as needed */
+//   height: auto;
+// }
+
+// .custom-loading .thinking-message .text {
+//   font-size: 18px;
+//   font-weight: bold;
+//   margin-top: 10px;
+//   color: black; /* Set text color to white */
+//   animation: pulse 1s infinite alternate; /* Add pulsing animation */
+// }
+
+// @keyframes pulse {
+//   from {
+//     opacity: 0.2;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
