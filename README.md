@@ -1,2 +1,3 @@
 # NepTune-Chords
-An app to see chords of songs.
+
+      A website to see Lyrics and chords of a song built using Angular and Ionic.
